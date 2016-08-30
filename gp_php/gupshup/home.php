@@ -1,5 +1,5 @@
 <?php
-
+//not tested
 class Home {
 	private $conn;
 	

@@ -1,6 +1,7 @@
 #GUPSHUP<br />
 Realtime private chat app  
 Server hosted on digital ocean. Might not be online by the time you see it :P.  <br/>
+Server goes down on 30th September 2016 <br/>
 <br />
 **CREDITS**:<br/>
 Server side:<br/> 

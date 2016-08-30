@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "259917866714",
+    "firebase_url": "https://gup-shup-c79b7.firebaseio.com",
+    "project_id": "gup-shup-c79b7",
+    "storage_bucket": "gup-shup-c79b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259917866714:android:c18035da861d55f2",
+        "android_client_info": {
+          "package_name": "com.example.lenovo.gupshup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259917866714-euqjic4o4bn1civ8u1imk3se3ncblbjl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lenovo.gupshup",
+            "certificate_hash": "FC9A3C253AA75123D3FA3BA0163AD93DE4874B53"
+          }
+        },
+        {
+          "client_id": "259917866714-5dqcuv3hg7mpfkeikhbsi4h37l3fupte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4T6MC1EDgT0I3IbSenDU1r0hKkPs1ZT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259917866714-5dqcuv3hg7mpfkeikhbsi4h37l3fupte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

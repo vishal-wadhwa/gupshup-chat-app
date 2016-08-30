@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:textAppearance="?android:textAppearanceLarge"
+    android:padding="12dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:text="Sample"
+    android:background="?android:selectableItemBackground"
+    android:textStyle="bold"
+    android:id="@+id/list_item"
+    android:typeface="serif"
+    android:layout_height="wrap_content"/>

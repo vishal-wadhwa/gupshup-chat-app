@@ -119,8 +119,11 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //Log.d(TAG, "Error occurred " + error.networkResponse.statusCode + " " + error.getMessage());
-                        if (error instanceof TimeoutError)
-                            Toast.makeText(LoginActivity.this, "Connection Timed Out", Toast.LENGTH_SHORT).show();
+                        if (error instanceof TimeoutError) {
+                            Toast.makeText(LoginActivity.this, "Connection Timed Out. Keep Trying :)", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
+                        else Log.d(TAG, "onErrorResponse: x122");
                         //error.printStackTrace();
                     }
                 }) {
@@ -164,6 +167,7 @@ public class LoginActivity extends AppCompatActivity {
         pd.setTitle("Contacting the Server");
         pd.setIndeterminate(true);
         pd.setCancelable(false);
+        pd.setMessage("Please wait...");
         StringRequest req = new StringRequest(
                 Request.Method.POST,
                 URLEndPoints.EndPoints.NEW_USER,
@@ -186,8 +190,11 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        if (error instanceof TimeoutError || error instanceof NoConnectionError)
-                            Toast.makeText(LoginActivity.this, "Connection Timed Out", Toast.LENGTH_SHORT).show();
+                        if (error instanceof TimeoutError) {
+                            Toast.makeText(LoginActivity.this, "Connection Timed Out. Keep Trying :)", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        } else Log.d(TAG, "onErrorResponse: x132 " + error.getMessage());
+
                     }
                 }) {
             @Override

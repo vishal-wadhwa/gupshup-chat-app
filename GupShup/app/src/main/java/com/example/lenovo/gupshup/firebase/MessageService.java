@@ -70,7 +70,7 @@ public class MessageService extends FirebaseMessagingService {
                 );
                 int chatId = message.getInt("chat_id");
                 ChatScreen screen = ChatScreen.getInstance();
-                if (screen != null && screen.isAppForeground()) triggerListUpdate(cMsgs);
+                if (screen != null && screen.isAppForeground(chatId)) triggerListUpdate(cMsgs);
                 else {
 
                     Intent intent = new Intent(this, ChatScreen.class);

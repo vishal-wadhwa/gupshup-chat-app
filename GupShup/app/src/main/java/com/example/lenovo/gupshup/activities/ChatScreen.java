@@ -297,8 +297,8 @@ public class ChatScreen extends AppCompatActivity {
         Volley.newRequestQueue(getApplicationContext()).add(request);
     }
 
-    public boolean isAppForeground() {
-        return isChatScreenOn;
+    public boolean isAppForeground(int chatId) {
+        return isChatScreenOn && chatId==chatID;
     }
 
     @Override

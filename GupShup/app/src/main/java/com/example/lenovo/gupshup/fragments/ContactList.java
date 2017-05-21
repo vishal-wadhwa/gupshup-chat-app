@@ -36,6 +36,8 @@ import com.turingtechnologies.materialscrollbar.AlphabetIndicator;
 import com.turingtechnologies.materialscrollbar.TouchScrollBar;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * A fragment representing a list of Items.
@@ -140,6 +142,12 @@ public class ContactList extends Fragment implements MainActivity.OnBackPressedL
             }
         }
         phoneList.close();
+        Collections.sort(nameList, new Comparator<ContactData>() {
+            @Override
+            public int compare(ContactData lhs, ContactData rhs) {
+                return lhs.getName().compareTo(rhs.getName());
+            }
+        });
     }
 
     @Override
@@ -185,6 +193,7 @@ public class ContactList extends Fragment implements MainActivity.OnBackPressedL
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
+            contactAdapter.notifyDataSetChanged();
 
         }
     }
